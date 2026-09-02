@@ -15,3 +15,13 @@ background_subtractor = cv2.createBackgroundSubtractorMOG2(
     detectShadows=True
 )
 
+while True:
+    # Read frame from webcam
+    success, frame = camera.read()
+
+    if not success:
+        print("Could not access camera.")
+        break
+
+    # Flipping frame so it feels like a mirror
+    frame = cv2.flip(frame, 1)
