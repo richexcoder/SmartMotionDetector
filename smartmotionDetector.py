@@ -50,3 +50,12 @@ while True:
 
         # Get the  moving object's position
         x, y, w, h = cv2.boundingRect(contour)
+
+        # Draw box around movement
+        cv2.rectangle(
+            frame,
+            (x, y),
+            (x + w, y + h),
+            (0, 255, 0),
+            2
+        )
