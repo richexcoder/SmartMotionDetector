@@ -37,3 +37,10 @@ while True:
         cv2.MORPH_ELLIPSE,
         (5, 5)
     )
+
+    for contour in contours:
+        area = cv2.contourArea(contour)
+
+        # Ignore any tiny movements/noise
+        if area < 2000:
+            continue
