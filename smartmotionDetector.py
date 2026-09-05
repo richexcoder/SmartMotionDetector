@@ -31,3 +31,9 @@ while True:
 
     # Remove the shadows
     _, mask = cv2.threshold(mask, 200, 255, cv2.THRESH_BINARY)
+
+    # Reduce the  noise
+    kernel = cv2.getStructuringElement(
+        cv2.MORPH_ELLIPSE,
+        (5, 5)
+    )
