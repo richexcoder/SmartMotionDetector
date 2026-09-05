@@ -38,13 +38,31 @@ while True:
         (5, 5)
     )
 
+    mask = cv2.morphologyEx(
+        mask,
+        cv2.MORPH_OPEN,
+        kernel
+    )
+
+    mask = cv2.dilate(mask, kernel, iterations=2)
+
+    # Find any moving objects in my webcam
+    contours, _ = cv2.findContours(
+        mask,
+        cv2.RETR_EXTERNAL,
+        cv2.CHAIN_APPROX_SIMPLE
+    )
+
+    motion_detected = False
+    motion_area = 0
+
     for contour in contours:
         area = cv2.contourArea(contour)
 
-        # Ignore any tiny movements/noise
+        # Ignore tiny movements/noise
         if area < 2000:
             continue
-            
+
         motion_detected = True
         motion_area += area
 
