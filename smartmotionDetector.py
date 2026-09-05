@@ -25,3 +25,9 @@ while True:
 
     # Flipping frame so it feels like a mirror
     frame = cv2.flip(frame, 1)
+
+    # Get the foreground mask
+    mask = background_subtractor.apply(frame)
+
+    # Remove the shadows
+    _, mask = cv2.threshold(mask, 200, 255, cv2.THRESH_BINARY)
