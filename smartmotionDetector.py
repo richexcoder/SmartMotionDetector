@@ -59,3 +59,14 @@ while True:
             (0, 255, 0),
             2
         )
+
+        # Label the moving object
+        cv2.putText(
+            frame,
+            "MOVEMENT",
+            (x, max(y - 10, 20)),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.6,
+            (0, 255, 0),
+            2
+        )
