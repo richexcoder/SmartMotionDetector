@@ -48,3 +48,5 @@ while True:
         motion_detected = True
         motion_area += area
 
+        # Get the  moving object's position
+        x, y, w, h = cv2.boundingRect(contour)
