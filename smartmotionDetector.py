@@ -44,3 +44,7 @@ while True:
         # Ignore any tiny movements/noise
         if area < 2000:
             continue
+            
+        motion_detected = True
+        motion_area += area
+
