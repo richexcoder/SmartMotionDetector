@@ -88,3 +88,7 @@ while True:
             (0, 255, 0),
             2
         )
+
+    # Calculate the approximate motion percentage
+    frame_area = frame.shape[0] * frame.shape[1]
+    motion_percentage = (motion_area / frame_area) * 100
