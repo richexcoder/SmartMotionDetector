@@ -95,3 +95,12 @@ while True:
 
     # Get current time
     current_time = datetime.now().strftime("%H:%M:%S")
+
+    # Draw top information bar
+    cv2.rectangle(
+        frame,
+        (0, 0),
+        (frame.shape[1], 70),
+        (0, 0, 0),
+        -1
+    )
