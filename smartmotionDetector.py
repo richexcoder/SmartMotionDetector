@@ -92,3 +92,6 @@ while True:
     # Calculate the approximate motion percentage
     frame_area = frame.shape[0] * frame.shape[1]
     motion_percentage = (motion_area / frame_area) * 100
+
+    # Get current time
+    current_time = datetime.now().strftime("%H:%M:%S")
