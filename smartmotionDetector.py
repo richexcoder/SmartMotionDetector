@@ -133,3 +133,15 @@ while True:
         (255, 255, 255),
         1
     )
+
+    # Show current time
+    cv2.putText(
+        frame,
+        current_time,
+        (500, 30),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.6,
+        (255, 255, 255),
+        2
+    )
+
