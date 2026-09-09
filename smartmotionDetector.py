@@ -155,7 +155,7 @@ while True:
         (200, 200, 200),
         1
     )
-    
+
     # Display main camera
     cv2.imshow("Smart Motion Detector", frame)
 
