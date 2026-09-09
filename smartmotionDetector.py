@@ -158,3 +158,6 @@ while True:
     
     # Display main camera
     cv2.imshow("Smart Motion Detector", frame)
+
+    # Display motion mask
+    cv2.imshow("Motion Detection Mask", mask)
