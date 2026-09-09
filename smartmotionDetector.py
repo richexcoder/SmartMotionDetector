@@ -161,3 +161,7 @@ while True:
 
     # Display motion mask
     cv2.imshow("Motion Detection Mask", mask)
+
+    # Press Q to quit
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break
