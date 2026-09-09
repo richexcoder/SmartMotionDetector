@@ -165,3 +165,7 @@ while True:
     # Press Q to quit
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
+
+# Release camera
+camera.release()
+cv2.destroyAllWindows()
