@@ -145,3 +145,14 @@ while True:
         2
     )
 
+    # Instructions at bottom
+    cv2.putText(
+        frame,
+        "Press Q to quit",
+        (20, 460),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.5,
+        (200, 200, 200),
+        1
+    )
+    
