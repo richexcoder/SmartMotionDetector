@@ -122,3 +122,14 @@ while True:
         status_color,
         2
     )
+
+    # Show motion percentage
+    cv2.putText(
+        frame,
+        f"Motion: {motion_percentage:.1f}%",
+        (20, 58),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.5,
+        (255, 255, 255),
+        1
+    )
