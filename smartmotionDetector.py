@@ -112,3 +112,13 @@ while True:
     else:
         status = "NO MOTION"
         status_color = (0, 255, 0)
+
+    cv2.putText(
+        frame,
+        status,
+        (20, 30),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.7,
+        status_color,
+        2
+    )
