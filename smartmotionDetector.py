@@ -104,3 +104,11 @@ while True:
         (0, 0, 0),
         -1
     )
+
+    # Show motion status
+    if motion_detected:
+        status = "MOTION DETECTED"
+        status_color = (0, 0, 255)
+    else:
+        status = "NO MOTION"
+        status_color = (0, 255, 0)
